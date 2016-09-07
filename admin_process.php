@@ -239,24 +239,12 @@ if(!$_SESSION["session_id"]=="root")
 					<td>
 						<select name="b_type" id="field_0_2">
 							<option  selected="selected" value="TEXT">한줄 입력칸(text)</option>
+							<option value="TEXTAREA">여러줄 입력칸(textarea)</option>
+							<option value="IMG">이미지(img)</option>
 							<option value="URL">URL형식(url)</option>
-							<option value="EMAIL">이메일 형식(email)</option>
-							<option value="PHONE">전화번호 형식(phone)</option>
-								<option value="CHECKBOX">다중 선택(checkbox)	</option>
-								<option value="SELECT">단일 선택(select)	</option>
-								<option value="RADIO">라디오 버튼(radio)	</option>
-								<option value="ZIP">한국주소(zip)	</option>
-								<option value="DATE">일자(연월일)	</option>
 						</select>
 					</td>
 				</tr>
-				<tr>
-					<td>기본값</td>
-					<td>
-						<input name="field_default_value" class="textfield" id="field_0_4" type="text" size="20" value="<?php $field_default_value?>"><br>
-						<font size="3px">다중/단일 선택 등 기본 값이 여러 개가 필요한 경우 , (콤마)로 연결하면 됩니다.</font>
-					</td>
-				
 				<tr>
 					<td>필수항목</td>
 					<td>
