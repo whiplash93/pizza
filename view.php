@@ -17,7 +17,7 @@
 		}
 	}
 	
-	$sql = "select b_title, b_content, b_date, b_hit, b_id, b_file, b_filedate from "."$tbname"." where b_no = ".$bNo;
+	$sql = "select * from "."$tbname"." where b_no = ".$bNo; //해당 테이블에서 해당 넘버의 컬럼데이터를 select
 	$result = $db->query($sql);
 	$row = $result->fetch_assoc();
 	
@@ -28,10 +28,12 @@
 	$result = $db->query($sql);
 	$tbdesc = $result->fetch_assoc();
 	$tbdesc = $tbdesc['description'];
+	//테이블 이름과 테이블 설명을 가져오기 위한 쿼리
 	
 	$sql = " select * from tb_view where b_tbname = '$tbname'";
 	$result = $db->query($sql);
 	$tbdesc = $result->fetch_assoc();
+	//tb_view 테이블에서 
 	
 ?>
 <!DOCTYPE html>
